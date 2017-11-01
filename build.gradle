@@ -68,8 +68,14 @@ jfx {
 
 dependencies {
     compile "org.codehaus.griffon:griffon-guice:${griffon.version}"
+    compile "org.slf4j:slf4j-simple:${slf4jVersion}"
 
-    runtime "org.slf4j:slf4j-simple:${slf4jVersion}"
+    // Agrego las librerías para manejo de websocket
+    compile 'org.glassfish.tyrus.bundles:tyrus-standalone-client:1.13.1'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.9.2'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.9.2'
+    compile 'org.springframework:spring-websocket:5.0.1.RELEASE'
+    compile 'org.springframework:spring-messaging:5.0.1.RELEASE'
 
     testCompile "org.codehaus.griffon:griffon-javafx-test:${griffon.version}"
     testCompile "org.codehaus.groovy:groovy-all:${groovyVersion}"
