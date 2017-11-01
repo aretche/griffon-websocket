@@ -5,7 +5,6 @@ import griffon.inject.MVCMember
 import griffon.metadata.ArtifactProviderFor
 
 import javax.annotation.Nonnull
-import javax.inject.Inject
 
 @ArtifactProviderFor(GriffonView)
 class GriffonWebsocketView {
